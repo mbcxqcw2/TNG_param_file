@@ -8,11 +8,11 @@
 %-------------------------------------------------------------------------
 
 %----  Relevant files
-InitCondFile  /home/u19/rthompson/sims/N128L16/IC/ics_N128L16.dat
+InitCondFile  /virgo/simulations/IllustrisTNG/TNG100-3/output/snap_ics.hdf5
 OutputDir     /home/u19/rthompson/sims/N128L16/COSMO/41_cameron/output
 
 %---- File formats 
-ICFormat    1  % 1=binary, 3=hdf5, 4=cluster 
+ICFormat    3  % 1=binary, 3=hdf5, 4=cluster 
 SnapFormat  3  % 1=binary, 3=hdf5 
 
 %---- Output parameters 

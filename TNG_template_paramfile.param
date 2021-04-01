@@ -9,7 +9,7 @@
 
 %----  Relevant files
 InitCondFile  /virgo/simulations/IllustrisTNG/TNG100-3/output/snap_ics.hdf5
-OutputDir     /home/u19/rthompson/sims/N128L16/COSMO/41_cameron/output
+OutputDir     /virgo/simulations/IllustrisTNG/TNG100-3/output
 
 %---- File formats 
 ICFormat    3  % 1=binary, 3=hdf5, 4=cluster 

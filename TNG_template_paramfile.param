@@ -1,10 +1,15 @@
 %-------------------------------------------------------------------------
-%----  This file contains the input parameters needed at run-time for 
-%       simulations. It is based on and closely resembles the GADGET-3
-%       parameterfile (format of which and parsing routines written by 
-%       Volker Springel [volker.springel@h-its.org]). It has been updated
-%       with new naming conventions and additional variables as needed by 
-%       Phil Hopkins [phopkins@caltech.edu] for GIZMO.
+%----  This file contains the input parameters needed to use yt/TRIDENT's 
+%       compound ray functionality with the IllustrisTNG 100-3 cosmological
+%       simulation. It is derived from the gizmo_cosmology_plus parameter 
+%       file by Phil Hopkins [phopkins@caltech.edu] found at:
+%       https://yt-project.org/data/
+%       Definitions of parameters can be found at: 
+%       https://arepo-code.org/wp-content/userguide/parameterfile.html
+%       It has been updated by Charles Walker [cwalker@mpifr-bonn.mpg.de]
+%       with help from John ZuHone [jzuhone@cfa.harvard.edu], Britton
+%       Smith [britton.smith@ed.ac.uk] and Dylan Nelson 
+%       [dnelson@uni-heidelberg.de].
 %-------------------------------------------------------------------------
 
 %----  Relevant files

@@ -36,12 +36,12 @@ TimeMax                 1.0                    % End of the simulation at z=0. (
 
 %-------- From: Output file names and formats
 OutputDir                   /virgo/simulations/IllustrisTNG/TNG100-3/output
-SnapshotFileBase            snap    % snapshot files are named snap_XXX.Y.hdf5 where XXX=(000-099) and Y=(0-6)
-NumFilesPerSnapshot         7       % (value is 'NumFiles' parameter from headers of snapshots)
-OutputListOn                1       % =1 to use list in "OutputListFilename"
-OutputListFilename          ./OutputList.txt (Using file generated from TNG headers)
-SnapFormat                  3       % 1=binary, 3=hdf5
-NumFilesWrittenInParallel   1       % must be < N_processors & power of 2 (DN notes as unneccessary for our uses)
+SnapshotFileBase            snap             % snapshot files are named snap_XXX.Y.hdf5 where XXX=(000-099) and Y=(0-6)
+NumFilesPerSnapshot         7                % (value is 'NumFiles' parameter from headers of snapshots)
+OutputListOn                1                % =1 to use list in "OutputListFilename"
+OutputListFilename          ./OutputList.txt % (Using file generated from TNG headers)
+SnapFormat                  3                % 1=binary, 3=hdf5
+NumFilesWrittenInParallel   1                % must be < N_processors & power of 2 (DN notes as unneccessary for our uses)
 
 %-------- From: Output frequency
 TimeBetSnapshot         0                      % Set to 0 as OutputListOn=1

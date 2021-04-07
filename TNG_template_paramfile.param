@@ -17,7 +17,6 @@
 UnitVelocity_in_cm_per_s    1.0e5           % 1 km/sec (Confirmed by DN.)
 UnitLength_in_cm            3.085678e21     % 1.0 kpc/h (Confirmed by DN.)
 UnitMass_in_g               1.989e43        % 1.0e10 solar mass/h (Confirmed by DN.)
-UnitMagneticField_in_gauss  1.0             % 1 gauss (Need to calculate, see https://www.tng-project.org/data/docs/specifications/)
 GravityConstantInternal     0               % calculated by code if =0 (Confirmed by DN.)
 
 %---- Cosmology Parameters

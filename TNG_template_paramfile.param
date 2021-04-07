@@ -14,38 +14,38 @@
 
 %---- Unit Conversion Parameters
 %-------- From: System of Units
-UnitVelocity_in_cm_per_s    1.0e5           % 1 km/sec
-UnitLength_in_cm            3.085678e21     % 1.0 kpc/h
-UnitMass_in_g               1.989e43        % 1.0e10 solar mass/h
-UnitMagneticField_in_gauss  1.0             % 1 gauss
-GravityConstantInternal     0               % calculated by code if =0
+UnitVelocity_in_cm_per_s    1.0e5           % 1 km/sec (DN cofirmed correct)
+UnitLength_in_cm            3.085678e21     % 1.0 kpc/h (DN confirmed correct)
+UnitMass_in_g               1.989e43        % 1.0e10 solar mass/h (DN confirmed correct)
+UnitMagneticField_in_gauss  1.0             % 1 gauss (Need to calculate, see https://www.tng-project.org/data/docs/specifications/)
+GravityConstantInternal     0               % calculated by code if =0 (Need to clarify, but assumed correct as Arepo guidelines encourage =0 for cosmological integrations)
 
 %---- Cosmology Parameters
 %-------- From: Cosmological parameters
-ComovingIntegrationOn   1       % is it cosmological? (yes=1, no=0)
-Omega0                  0.3    % =0 for non-cosmological
-OmegaBaryon             0.045   % =0 for non-cosmological
-OmegaLambda             0.7    % =0 for non-cosmological
-HubbleParam             0.7     % little 'h'; =1 for non-cosmological runs
+ComovingIntegrationOn   1         % is it cosmological? (yes=1, no=0)
+Omega0                  0.3089    % =0 for non-cosmological (1 - OmegaLambda)
+OmegaBaryon             0.0486    % =0 for non-cosmological (Planck 2015, see https://www.tng-project.org/data/docs/background/)
+OmegaLambda             0.6911    % =0 for non-cosmological (Planck 2015, see https://www.tng-project.org/data/docs/background/)
+HubbleParam             0.6774    % little 'h'; =1 for non-cosmological runs (Planck 2015, see: https://www.tng-project.org/data/docs/background/)
 
 %---- Snapshot Saving parameters
 %-------- From: Simulated time stamp and spatial extent
-BoxSize                 16000.  % in code units
-PeriodicBoundariesOn    1
-TimeBegin               0.01    % Beginning of the simulation
-TimeMax                 1.00     % End of the simulation
+BoxSize                 75000.                 % in code units (see table in https://www.tng-project.org/data/docs/background/)
+PeriodicBoundariesOn    1                      % (Need to clarify but assumed correct, see https://arepo-code.org/wp-content/userguide/parameterfile.html)
+TimeBegin               0.047513858748795615   % Beginning of the simulation (Need to clarify, currently chosen value is 'Time' parameter from snapshot 0 header)
+TimeMax                 0.9999999999999998     % End of the simulation (Need to clarify, currently chosen value is 'Time' parameter from snapshot 99 header)
 
 %-------- From: Output file names and formats
 OutputDir                   /virgo/simulations/IllustrisTNG/TNG100-3/output
-SnapshotFileBase            snap_N128L16
-NumFilesPerSnapshot         1
-OutputListOn                1  % =1 to use list in "OutputListFilename"
-OutputListFilename          outputs_reionstand.txt
-SnapFormat                  3  % 1=binary, 3=hdf5
-NumFilesWrittenInParallel   1  % must be < N_processors & power of 2
+SnapshotFileBase            snap    % snapshot files are named snap_XXX.Y.hdf5 where XXX=(000-099) and Y=(0-6)
+NumFilesPerSnapshot         7       % (value is 'NumFiles' parameter from headers of snapshots)
+OutputListOn                1       % =1 to use list in "OutputListFilename" (Need to clarify, see https://arepo-code.org/wp-content/userguide/parameterfile.html)
+OutputListFilename          outputs_reionstand.txt (Need to clarify, see https://arepo-code.org/wp-content/userguide/parameterfile.html)
+SnapFormat                  3       % 1=binary, 3=hdf5
+NumFilesWrittenInParallel   1       % must be < N_processors & power of 2 (Need to clarify, see https://arepo-code.org/wp-content/userguide/parameterfile.html)
 
 %-------- From: Output frequency
-TimeBetSnapshot         1.1
-TimeOfFirstSnapshot     0.1
+TimeBetSnapshot         X                      % Need to clarify, see https://arepo-code.org/wp-content/userguide/parameterfile.html)
+TimeOfFirstSnapshot     0.047513858748795615   % Time of first desired snapshot in code units (value is 'Time' parameter from snapshot 0 header)
 
   

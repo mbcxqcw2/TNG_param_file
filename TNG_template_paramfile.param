@@ -14,11 +14,11 @@
 
 %---- Unit Conversion Parameters
 %-------- From: System of Units
-UnitVelocity_in_cm_per_s    1.0e5           % 1 km/sec (DN cofirmed correct)
-UnitLength_in_cm            3.085678e21     % 1.0 kpc/h (DN confirmed correct)
-UnitMass_in_g               1.989e43        % 1.0e10 solar mass/h (DN confirmed correct)
+UnitVelocity_in_cm_per_s    1.0e5           % 1 km/sec (Confirmed by DN.)
+UnitLength_in_cm            3.085678e21     % 1.0 kpc/h (Confirmed by DN.)
+UnitMass_in_g               1.989e43        % 1.0e10 solar mass/h (Confirmed by DN.)
 UnitMagneticField_in_gauss  1.0             % 1 gauss (Need to calculate, see https://www.tng-project.org/data/docs/specifications/)
-GravityConstantInternal     0               % calculated by code if =0 (Need to clarify, but assumed correct as Arepo guidelines encourage =0 for cosmological integrations)
+GravityConstantInternal     0               % calculated by code if =0 (Confirmed by DN.)
 
 %---- Cosmology Parameters
 %-------- From: Cosmological parameters
@@ -31,21 +31,21 @@ HubbleParam             0.6774    % little 'h'; =1 for non-cosmological runs (Pl
 %---- Snapshot Saving parameters
 %-------- From: Simulated time stamp and spatial extent
 BoxSize                 75000.                 % in code units (see table in https://www.tng-project.org/data/docs/background/)
-PeriodicBoundariesOn    1                      % (Need to clarify but assumed correct, see https://arepo-code.org/wp-content/userguide/parameterfile.html)
-TimeBegin               0.047513858748795615   % Beginning of the simulation (Need to clarify, currently chosen value is 'Time' parameter from snapshot 0 header)
-TimeMax                 0.9999999999999998     % End of the simulation (Need to clarify, currently chosen value is 'Time' parameter from snapshot 99 header)
+PeriodicBoundariesOn    1                      % (Confirmed by DN.)
+TimeBegin               0.0078125              % Beginning of the simulation at z=127. (Confirmed by DN.)
+TimeMax                 1.0                    % End of the simulation at z=0. (Confirmed by DN.)
 
 %-------- From: Output file names and formats
 OutputDir                   /virgo/simulations/IllustrisTNG/TNG100-3/output
 SnapshotFileBase            snap    % snapshot files are named snap_XXX.Y.hdf5 where XXX=(000-099) and Y=(0-6)
 NumFilesPerSnapshot         7       % (value is 'NumFiles' parameter from headers of snapshots)
-OutputListOn                1       % =1 to use list in "OutputListFilename" (Need to clarify, see https://arepo-code.org/wp-content/userguide/parameterfile.html)
-OutputListFilename          outputs_reionstand.txt (Need to clarify, see https://arepo-code.org/wp-content/userguide/parameterfile.html)
+OutputListOn                1       % =1 to use list in "OutputListFilename"
+OutputListFilename          ./OutputList.txt (Using file generated from TNG headers)
 SnapFormat                  3       % 1=binary, 3=hdf5
-NumFilesWrittenInParallel   1       % must be < N_processors & power of 2 (Need to clarify, see https://arepo-code.org/wp-content/userguide/parameterfile.html)
+NumFilesWrittenInParallel   1       % must be < N_processors & power of 2 (DN notes as unneccessary for our uses)
 
 %-------- From: Output frequency
-TimeBetSnapshot         X                      % Need to clarify, see https://arepo-code.org/wp-content/userguide/parameterfile.html)
+TimeBetSnapshot         0                      % Set to 0 as OutputListOn=1
 TimeOfFirstSnapshot     0.047513858748795615   % Time of first desired snapshot in code units (value is 'Time' parameter from snapshot 0 header)
 
   

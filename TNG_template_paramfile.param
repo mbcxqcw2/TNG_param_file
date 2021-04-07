@@ -39,7 +39,7 @@ OutputDir                   /virgo/simulations/IllustrisTNG/TNG100-3/output
 SnapshotFileBase            snap             % snapshot files are named snap_XXX.Y.hdf5 where XXX=(000-099) and Y=(0-6)
 NumFilesPerSnapshot         7                % (value is 'NumFiles' parameter from headers of snapshots)
 OutputListOn                1                % =1 to use list in "OutputListFilename"
-OutputListFilename          ./OutputList.txt % (Using file generated from TNG headers)
+OutputListFilename          /u/cwalker/Illustris_FRB_Project/TNG_param_file/OutputList.txt % (Created using TNG headers. Change path to current directory!)
 SnapFormat                  3                % 1=binary, 3=hdf5
 NumFilesWrittenInParallel   1                % must be < N_processors & power of 2 (DN notes as unneccessary for our uses)
 
